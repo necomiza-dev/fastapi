@@ -1,0 +1,129 @@
+#include <iostream>
+
+using namespace std;
+
+class String {
+private:
+    char* str;
+    int size;
+
+    int strlen_custom(const char* s) {
+        int len = 0;
+        while (s[len] != '\0') ++len;
+        return len;
+    }
+
+    void strcpy_custom(char* dest, const char* src) {
+        int i = 0;
+        while (src[i] != '\0') {
+            dest[i] = src[i];
+            ++i;
+        }
+        dest[i] = '\0';
+    }
+
+public:
+    String() {
+        size = 0;
+        str = new char[1];
+        str[0] = '\0';
+        cout << "Конструктор по умолчанию str - значение: \"" << str << "\" размер " << size << "\n";
+    }
+
+    String(const char* s) {
+        size = strlen_custom(s);
+        str = new char[size + 1];
+        strcpy_custom(str, s);
+        cout << "Конструктор с параметром str - значение: \"" << str << "\" размер " << size << "\n";
+    }
+
+    String(const String& other) {
+        size = other.size;
+        str = new char[size + 1];
+        strcpy_custom(str, other.str);
+        cout << "Конструктор копирования str - значение: \"" << str << "\" размер " << size << "\n";
+    }
+
+    ~String() {
+        delete[] str;
+    }
+
+    const char* get_value() const {
+        return str;
+    }
+
+    int get_size() const {
+        return size;
+    }
+
+    void set_value(const char* s) {
+        delete[] str;
+        size = strlen_custom(s);
+        str = new char[size + 1];
+        strcpy_custom(str, s);
+    }
+
+    void put(char c) {
+        char* new_str = new char[size + 2];
+        for (int i = 0; i < size; ++i) {
+            new_str[i] = str[i];
+        }
+        new_str[size] = c;
+        new_str[size + 1] = '\0';
+
+        delete[] str;
+        str = new_str;
+        ++size;
+    }
+
+    void clear() {
+        delete[] str;
+        size = 0;
+        str = new char[1];
+        str[0] = '\0';
+    }
+
+    String operator+(const String& other) const {
+        String result;
+ #include <iostream>
+
+using namespace std;
+
+class Figure {
+protected:
+    int count_corner; 
+public:
+    Figure(int corners) : count_corner(corners) {}
+
+    virtual void printInfo() const {
+        cout << "Фигура, " << count_corner << " угла" << endl;
+    }
+};
+class Triangle : public Figure {
+public:
+    Triangle() : Figure(3) {}
+
+    void printInfo() const override {
+        cout << "Треугольник, " << count_corner << " угла" << endl;
+    }
+};
+class Rectangle : public Figure {
+public:
+    Rectangle() : Figure(4) {}
+
+    void printInfo() const override {
+        cout << "Прямоугольник, " << count_corner << " угла" << endl;
+    }
+};
+
+int main() {
+
+    setlocale(LC_CTYPE, "Russian_Russia.1251");
+    Triangle triangle;
+    Rectangle rectangle;
+
+    triangle.printInfo();
+    rectangle.printInfo();
+
+    return 0;
+}
