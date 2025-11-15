@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Детали фильма: {{ movie.name }}</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Детали фильма: {{ movie.name }}</h1>
+
+        <!-- Кнопки авторизации -->
+        <div class="auth-buttons">
+            <a href="/login"><button>Войти</button></a>
+            {% if current_user %}
+            <a href="/add_movie" class="add-movie-btn">Добавить фильм</a>
+            <a href="/user">Профиль</a>
+            {% endif %}
+        </div>
+
+        <div class="movie-details">
+            {% if movie.cover_path %}
+            <img src="{{ movie.cover_path }}" alt="Обложка {{ movie.name }}" class="movie-cover">
+            {% else %}
+            <div style="background: #404040; width: 300px; height: 400px; display: flex; align-items: center; justify-content: center; border-radius: 8px; margin: 0 auto 20px;">Нет изображения</div>
+            {% endif %}
+            <h2>{{ movie.name }}</h2>
+            <p><strong>Год:</strong> {{ movie.year or 'Не указан' }}</p>
+            <p><strong>Описание:</strong> {{ movie.description or 'Описание отсутствует' }}</p>
+            <p class="movie-cost"><strong>Стоимость:</strong> {{ movie.cost or 'Бесплатно' }}</p>
+            <p><strong>Режиссер:</strong> {{ movie.director or 'Не указан' }}</p>
+        </div>
+
+        <a href="/movietop">Назад к списку</a> | <a href="/movietop/{{ movie.name_en }}">JSON</a>
+    </div>
+</body>
+</html>
+
+

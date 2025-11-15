@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пользователь</title>
+    <!-- Подключение CSS -->
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Профиль пользователя</h1>
+        <p><strong>Пользователь:</strong> {{ user }}</p>
+        <p><strong>Время аутентификации:</strong> {{ auth_time }}</p>
+
+        <h2>Список фильмов</h2>
+        <ul>
+            {% for movie in movies %}
+            <li class="movie-card">
+                <div class="movie-info">
+                    <h3>{{ movie.name }} ({{ movie.name_en }})</h3>
+                    <p><strong>Режиссёр:</strong> {{ movie.director }}</p>
+                    <p class="movie-cost"><strong>Стоимость:</strong> {{ movie.cost }} млн. $</p>
+                    <p class="movie-year"><strong>Год:</strong> {{ movie.year }}</p>
+                    <p><strong>Классика:</strong> {% if movie.is_classic %}Да{% else %}Нет{% endif %}</p>
+                    {% if movie.cover_path %}
+                    <img src="{{ movie.cover_path }}" alt="Обложка" class="movie-image">
+                    {% endif %}
+                    <a href="/movietop/{{ movie.name_en }}/detail">Подробнее</a>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <p><a href="/movietop">Вернуться к списку фильмов</a></p>
+        <p><a href="/add_movie" class="add-movie-btn">Добавить фильм</a></p>
+    </div>
+</body>
+</html>
+
+

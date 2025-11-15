@@ -1,0 +1,74 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Generated files and compiled Python files
+*.so
+*.pyc
+*.pyo
+
+# IDE and editor files
+.idea/
+.vscode/
+*.code-workspace
+
+# Log files
+*.log
+*.out
+*.log.*
+
+# Temporary files
+*.tmp
+*~
+
+# Data files (e.g., database dumps, large test files)
+data/
+
+# Environment configuration (if not needed in repo)
+.env
+.flaskenv
+
+# Dependency files (keep requirements.txt, but ignore installed packages)
+.pip/
+pip-log.txt
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+eggs/
+.installed.cfg
+*.egg
+
+# PyTest and testing
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Docker files (if not version-controlled)
+.dockerenv
+.docker-ignore
+
+# Static files (if auto-generated)
+static/
+
+# Session and cache files
+*.session
+*.cache
+
+# Output directories (if auto-generated)
+output/
+results/
+
+# Ignore API keys and secrets
+keys/
+secrets.json
+
+# Ignore specific FastAPI dev files (if applicable)
+.uvicorn.log

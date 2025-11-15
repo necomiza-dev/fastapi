@@ -1,0 +1,147 @@
+{
+    "movies": [
+        {
+            "id": 1,
+            "name": "Форрест Гамп",
+            "name_en": "Forrest Gump",
+            "director": "Роберт Земекис",
+            "cost": 55000000,
+            "year": 1994,
+            "is_classic": true,
+            "cover_path": "/static/covers/1_poster.jpg",
+            "description_path": "/static/descriptions/1_description.txt",
+            "description": "Описание отсутствует"
+        },
+        {
+            "id": 2,
+            "name": "Зелёная миля",
+            "name_en": "The Green Mile",
+            "director": "Фрэнк Дарабонт",
+            "cost": 60000000,
+            "year": 1999,
+            "is_classic": true,
+            "cover_path": "/static/covers/2_poster.jpg",
+            "description_path": "/static/descriptions/2_description.txt",
+            "description": "Описание отсутствует"
+        },
+        {
+            "id": 3,
+            "name": "Властелин колец: Возвращение короля",
+            "name_en": "The Lord of the Rings: The Return of the King",
+            "director": "Питер Джексон",
+            "cost": 94000000,
+            "year": 2003,
+            "is_classic": true,
+            "cover_path": "/static/covers/3_poster.jpg",
+            "description_path": "/static/descriptions/3_description.txt",
+            "description": "Описание отсутствует"
+        },
+        {
+            "id": 4,
+            "name": "Список Шиндлера",
+            "name_en": "Schindler's List",
+            "director": "Стивен Спилберг",
+            "cost": 22000000,
+            "year": 1993,
+            "is_classic": true,
+            "cover_path": "/static/covers/4_poster.jpg",
+            "description_path": "/static/descriptions/4_description.txt",
+            "description": "Описание отсутствует"
+        },
+        {
+            "id": 5,
+            "name": "Матрица",
+            "name_en": "The Matrix",
+            "director": "Вачовски",
+            "cost": 63000000,
+            "year": 1999,
+            "is_classic": true,
+            "cover_path": "/static/covers/5_poster.jpg",
+            "description_path": "/static/descriptions/5_description.txt",
+            "description": "Описание отсутствует"
+        },
+        {
+            "id": 6,
+            "name": "Интерстеллар",
+            "name_en": "Interstellar",
+            "director": "Кристофер Нолан",
+            "cost": 165000000,
+            "year": 2014,
+            "is_classic": false,
+            "cover_path": "/static/covers/6_poster.jpg",
+            "description_path": "/static/descriptions/6_description.txt",
+            "description": "Описание отсутствует"
+        },
+        {
+            "id": 7,
+            "name": "Криминальное чтиво",
+            "name_en": "Pulp Fiction",
+            "director": "Квентин Тарантино",
+            "cost": 8000000,
+            "year": 1994,
+            "is_classic": true,
+            "cover_path": "/static/covers/7_poster.jpg",
+            "description_path": "/static/descriptions/7_description.txt",
+            "description": "Описание отсутствует"
+        },
+        {
+            "id": 8,
+            "name": "Начало",
+            "name_en": "Inception",
+            "director": "Кристофер Нолан",
+            "cost": 160000000,
+            "year": 2010,
+            "is_classic": false,
+            "cover_path": "/static/covers/8_poster.jpg",
+            "description_path": "/static/descriptions/8_description.txt",
+            "description": "Описание отсутствует"
+        },
+        {
+            "id": 9,
+            "name": "Дюнкерк",
+            "name_en": "Dunkirk",
+            "director": "Кристофер Нолан",
+            "cost": 100000000,
+            "year": 2017,
+            "is_classic": false,
+            "cover_path": "/static/covers/9_poster.jpg",
+            "description_path": "/static/descriptions/9_description.txt",
+            "description": "Описание отсутствует"
+        },
+        {
+            "id": 10,
+            "name": "Мстители: Финал",
+            "name_en": "Avengers: Endgame",
+            "director": "Энтони Руссо, Джо Руссо",
+            "cost": 400000000,
+            "year": 2019,
+            "is_classic": false,
+            "cover_path": "/static/covers/10_poster.jpg",
+            "description_path": "/static/descriptions/10_description.txt",
+            "description": "Описание отсутствует"
+        },
+        {
+            "id": 11,
+            "name": "Всеведущий читатель",
+            "name_en": "Jeokjijeok dokja sijeom",
+            "director": " Ким Бён-у",
+            "cost": 23400000,
+            "year": 2025,
+            "is_classic": false,
+            "cover_path": "/static/covers/11_poster.jpg",
+            "description_path": "/static/descriptions/11_description.txt",
+            "description": ""
+        },
+        {
+            "id": 12,
+            "name": "Всеведущий читатель",
+            "name_en": "Jeokjijeok dokja sijeom",
+            "director": " Ким Бён-у",
+            "cost": 50000000,
+            "year": 2025,
+            "is_classic": false,
+            "cover_path": "/static/covers/12_poster.jpg",
+            "description_path": "/static/descriptions/12_description.txt"
+        }
+    ]
+}

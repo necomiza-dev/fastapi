@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Топ-10 фильмов</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Топ-10 фильмов</h1>
+
+        <!-- Кнопки авторизации (как на скриншоте) -->
+        <div class="auth-buttons">
+            <a href="/login"><button>Войти</button></a>
+            <a href="/add_movie" class="add-movie-btn">Добавить фильм</a>
+            {% if current_user %}
+            <a href="/add_movie" class="add-movie-btn">Добавить фильм</a>
+            <a href="/user">Профиль</a>
+            {% endif %}
+        </div>
+
+        {% for movie in movies %}
+        <div class="movie-card">
+            {% if movie.cover_path %}
+            <img src="{{ movie.cover_path }}" alt="Обложка {{ movie.name }}" class="movie-image">
+            {% else %}
+            <div class="movie-image" style="background: #404040; width: 150px; height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 5px;">Нет изображения</div>
+            {% endif %}
+            <div class="movie-info">
+                <h3>{{ movie.name }}</h3>
+                <p class="movie-year">Год: {{ movie.year or 'Не указан' }}</p>
+                <p>{{ movie.description or 'Описание отсутствует' }}</p>
+                <a href="/movietop/{{ movie.name_en }}/detail">Подробнее</a>
+            </div>
+        </div>
+        {% endfor %}
+
+
+    </div>
+</body>
+</html>
+
+
+
+
